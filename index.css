@@ -1,0 +1,178 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+* {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: grid;
+  grid-template-areas:
+    "title"
+    "subtitles"
+    "dashboards";
+  grid-template-rows: auto auto 1fr;
+  width: 100%;
+  place-items: center;
+  gap: 2rem;
+  padding: 1rem 0;
+}
+
+#title {
+  grid-area: title;
+  text-align: center;
+}
+
+#panel {
+  grid-area: dashboards;
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "subtitles"
+    "dashboards";
+  width: 100%;
+  gap: 2rem;
+  padding: 0 5%;
+}
+
+.subtitle-container {
+  grid-area: subtitles;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  text-align: center;
+}
+
+.subtitle {
+  font-weight: 600;
+}
+
+.dashboards {
+  grid-area: dashboards;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+
+.cam {
+  display: grid;
+  grid-template-rows: auto auto;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 1rem;
+  justify-items: center;
+  align-items: center;
+}
+
+.camera-image {
+  width: 100%;
+  height: auto;
+  image-rendering: crisp-edges;
+}
+
+.camera-canvas {
+  width: 320px;
+  height: 240px;
+  image-rendering: crisp-edges;
+}
+
+.remote-control {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  gap: 1.5rem;
+  position: relative;
+  justify-items: center;
+  align-items: start;
+}
+
+#ac_protocol_selector {
+  top: 1rem;
+}
+
+.temp-icons {
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  grid-template-columns: repeat(2, auto);
+  gap: 1rem;
+}
+
+.manage-temp-icon {
+  width: 2rem;
+  cursor: pointer;
+  background-color: antiquewhite;
+  border: 1px solid purple;
+  border-radius: 5px;
+  padding: 0.4rem;
+}
+
+#temp-screen {
+  border: 4px dashed red;
+  font-family: "Orbitron", sans-serif;
+  font-size: 2.2rem;
+  color: green;
+  border-radius: 8px;
+  width: 12rem;
+  height: 6.5rem;
+  line-height: 6rem;
+  text-align: center;
+  background-color: black;
+}
+
+.power-button {
+  border: 1px solid rgb(90, 170, 201);
+  border-radius: 5px;
+  background: skyblue;
+  color: white;
+  text-align: center;
+  padding: 0.4rem;
+  cursor: pointer;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 1rem;
+}
+
+#protocolForm {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 300px;
+}
+
+#protocolForm input,
+#protocolForm button {
+  padding: 0.5rem;
+  font-size: 1rem;
+  width: 100%;
+}
+
+#protocolList {
+  width: 100%;
+  max-width: 300px;
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+  font-family: monospace;
+}
+
+#toggle_mode {
+  background-color: lightcoral;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+}

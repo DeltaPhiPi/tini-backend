@@ -1,0 +1,19 @@
+[package]
+name = "images"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+axum = { version = "0.8.4", features = ["multipart", "ws"] }
+chrono = "0.4.41"
+colorous = "1.0.16"
+dotenv = "0.15.0"
+dotenv_codegen = "0.15.0"
+image = "0.25.6"
+reqwest = "0.12.20"
+serde = { version = "1.0.219", features = ["derive"] }
+serde_json = "1.0.140"
+tokio = { version = "1.44.2", features = ["fs", "full", "io-util", "macros", "rt-multi-thread"] }
+tokio-stream = "0.1.17"
+tower = "0.5.2"
+tower-http = { version = "0.6.2", features = ["cors", "full"] }

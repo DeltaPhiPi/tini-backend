@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <script defer src="index.js"></script>
+    <title>Panel - TINSCF</title>
+</head>
+
+<body>
+    <h1 id="title">Centro de monitoreo de salón inteligente</h1>
+    <div id="panel">
+        <div class="subtitle-container">
+            <h2 class="subtitle">Cámara térmica para control de aforo</h2>
+            <h2 class="subtitle">Aire acondicionado</h2>
+        </div>
+        <div class="dashboards">
+            <div class="cam">
+                <img alt="Imagen de cámara térmica del salón" class="camera-image">
+                <canvas width="32" height="24" class="camera-canvas"></canvas>
+            </div>
+            <div class="container">
+                <div class="remote-control">
+                    <select name="ac_protocol_selector" id="ac_protocol_selector"></select>
+                    
+                    <button id="toggle_mode">Mode: Cool</button>
+                    <div class="temp-icons">
+                        <div class="power-button" id="on_button">On</div>
+                        <div class="power-button" id="off_button">Off</div>
+                        <svg class="manage-temp-icon" id="inc_temp" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32v144H48c-17.7 0-32 14.3-32 32s14.3 32 32 32h144v144c0 17.7 14.3 32 32 32s32-14.3 32-32V288h144c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z" />
+                        </svg>
+                        <svg class="manage-temp-icon" id="dec_temp" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path d="M432 256c0 17.7-14.3 32-32 32H48c-17.7 0-32-14.3-32-32s14.3-32 32-32h352c17.7 0 32 14.3 32 32z" />
+                        </svg>
+                    </div>
+                    <div id="temp-screen">-</div>
+                </div>
+                <div>
+                <form id="protocolForm">
+                    <select id="protoInput" required></select>
+                    <input type="text" id="serviceInput" placeholder="Espacio" required>
+                    <input type="text" id="roomInput" placeholder="Salón" required>
+                    <button type="submit">Guardar Protocolo</button>
+                </form>
+
+                <div id="protocolList">
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

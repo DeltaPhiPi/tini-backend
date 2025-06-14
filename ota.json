@@ -1,0 +1,8 @@
+{
+		"Configurations": [
+			{
+			"Version": "1.1.0",
+			"URL": "http://fing-bot.brazilsouth.cloudapp.azure.com:5000/ota/test.bin"
+			}
+		]
+	}
