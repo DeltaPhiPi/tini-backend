@@ -65,7 +65,7 @@ async fn main() {
         .layer(CorsLayer::very_permissive())
     ;
     let listener = tokio::net::TcpListener::bind("0.0.0.0:5000").await.unwrap();
-    let forever = task::spawn(async {
+    /*let forever = task::spawn(async {
 	println!("Foreverrrrr");
         let mut interval = time::interval(Duration::from_millis(30000));
 
@@ -74,11 +74,9 @@ async fn main() {
 	    println!("Sent field5, got {:?}", resp);
             interval.tick().await;
         }
-    });
+    });*/
     tokio::join!(
-	    axum::serve(listener, app),
-    forever
-	    
+	    axum::serve(listener, app),	    
     );
 
 
